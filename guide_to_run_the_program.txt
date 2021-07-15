@@ -1,0 +1,42 @@
+Step 1: 
+Installation Requirements
+
+Installation of Tesseract-OCR library
+Tesseract OCR version :- 'tesseract-ocr-w64-setup-v4.1.0.20190314.exe'
+link :- https://digi.bib.uni-mannheim.de/tesseract/
+
+'pytesseract.pytesseract.tesseract_cmd' variable path is given according to the path where your                 'tesseract.exe' file is located after installing Tesseract-OCR library. Change this path as mentioned in 'main_program.py' and 'text_extraction.py' 
+
+
+Create a virtual environment and then activate the virtual environment. 
+Then install all the requirements of the project by using the command:
+pip install -r requirements.txt
+
+
+Step 2:- 
+First run 'convert_pdf_to_images.py' file to convert the given pdf to an image by providing the path to the pdf file in variable 'images' in line no 3.
+
+Output: produces output.jpg file in the folder
+
+Step2 is not recommended to get better results.. Since,the pixel information of an image get lost while converting the image from pdf to image so it is recommended to test the program on job_assignment_img.jpg.
+'job_assignment_img.jpg' is higher quality image than 'output.jpg' produced.
+///
+Recommended: The program is tested on 'job_assignment_img.jpg' so the program gives the better result on this image than output.jpg.
+
+
+Step3:
+Run 'extract_region_of_interest.py' file by providing the path of the image you want to test in variable 'image_path' in line no 2.
+
+Output : Produces three pickle files : 
+1) 'roi_list.pkl' :- contains the coordinates of the region of interest that we want to extract
+2) 'mbl_list.pkl' :- contains the coordinates of 'mbl num' which can later be used to check whether the SAAC code is below 'mbl num' or 'hbl num'
+3) 'hbl_list.pkl' :- contains the coordinates of 'hbl num' which can later be used to check whether the SAAC code is below 'mbl num' or 'hbl num'
+
+
+Step 4:
+Run 'text_extraction.py' file to extract the desired text from the image by providing the path of the image in variable 'query_path' in line no 26.
+
+Output: 'output.json' file which contains the keys name matching with the ones given on the table.
+
+Note: 'image_path' in step2 and 'query_path' in step3 must be same.... Otherwise the program will throw errors.
+      The output result is based on the program tested on 'job_assignment_img.jpg'.

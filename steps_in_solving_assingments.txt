@@ -1,0 +1,16 @@
+installation of tesseract ocr library
+https://medium.com/quantrium-tech/installing-and-using-tesseract-4-on-windows-10-4f7930313f82
+
+theoritical understanding of ocr 
+OCR book by Pyimage search guru  Adrian Rosenblack
+
+Line Detection In Image Using Hough Transformation
+https://www.youtube.com/watch?v=gbL3XKOiBvw
+
+Image thresholding or Canny Edge Detection
+
+Contour Detection
+
+Drawing Rectangles from the contours detected
+
+
